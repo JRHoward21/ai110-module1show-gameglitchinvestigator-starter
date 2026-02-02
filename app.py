@@ -48,6 +48,9 @@ def check_guess(guess, secret):
 
 ## Check guess isn't accurate. When guess is higher than the secret it says go higher and when your answer is lower it says go lower.
 
+##FIXED: Refactored logic in app.py using copilot Agent Mode
+
+
 def update_score(current_score: int, outcome: str, attempt_number: int):
     if outcome == "Win":
         points = 100 - 10 * (attempt_number + 1)
@@ -149,6 +152,8 @@ if st.session_state.status != "playing":
     st.stop()
 
 ## Once you win or lose it doesn't reset the game session
+
+## FIXED: Refactored New game logic in app_py using Copilot Agent mode
 if submit:
     st.session_state.attempts += 1
 
